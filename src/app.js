@@ -6,6 +6,9 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const fetchCryptoData = require('./jobs/fetchCryptoData');
 
+// Import routes
+const userRoutes = require('./routes/userRoutes');
+
 // Load environment variables from .env file
 dotenv.config();
 
@@ -24,11 +27,8 @@ mongoose
 
 fetchCryptoData();
 
-// Import routes
-// const userRoutes = require('./routes/userRoutes');
-
 // Use routes
-// app.use('/api/stats', userRoutes);
+app.use('/api/stats', userRoutes);
 
 // Health check route
 app.get('/', (req, res) => {
