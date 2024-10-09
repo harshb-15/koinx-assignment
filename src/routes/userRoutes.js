@@ -5,6 +5,7 @@ const { getStats, getDeviation } = require('../controllers/cryptoController');
 
 const router = express.Router();
 
-router.get('/', getStats);
+router.get('/stats', getStats);
+router.get('/deviation', getDeviation);
 
 module.exports = router;
