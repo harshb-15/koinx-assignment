@@ -21,7 +21,7 @@ const fetchCryptoData = () => {
                     change: bitcoin.usd_24h_change,
                 },
                 {
-                    name: 'Matic',
+                    name: 'Matic-network',
                     price: matic.usd,
                     marketCap: matic.usd_market_cap,
                     change: matic.usd_24h_change,
