@@ -1,5 +1,3 @@
-// src/app.js
-
 // Import required modules
 const express = require('express');
 const mongoose = require('mongoose');
