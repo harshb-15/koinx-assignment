@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const fetchCryptoData = require('./jobs/fetchCryptoData');
 
 // Load environment variables from .env file
 dotenv.config();
@@ -20,6 +21,8 @@ mongoose
     .connect(process.env.MONGODB_URI)
     .then(() => console.log('MongoDB connected'))
     .catch((err) => console.error('MongoDB connection error:', err));
+
+fetchCryptoData();
 
 // Import routes
 // const userRoutes = require('./routes/userRoutes');
