@@ -28,7 +28,7 @@ mongoose
 fetchCryptoData();
 
 // Use routes
-app.use('/api', userRoutes);
+app.use('/', userRoutes);
 
 // Health check route
 app.get('/', (req, res) => {
